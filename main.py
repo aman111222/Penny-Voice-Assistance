@@ -20,19 +20,19 @@ def take_command():
     try:
         with sr.Microphone() as source:
             print('listening... ')
-            print('Say - Ritu...')
+            print('Say - Penny...')
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'ritu' in command:
-                command = command.replace('ritu', '')
+            if 'penny' in command:
+                command = command.replace('penny', '')
                 print(command)
     except:
         pass
     return command
 
 
-def run_alexa():
+def run_penny():
     command = take_command()
     print(command)
     if 'play' in command:
@@ -58,4 +58,4 @@ def run_alexa():
 
 
 while True:
-    run_alexa()
+    run_penny()
